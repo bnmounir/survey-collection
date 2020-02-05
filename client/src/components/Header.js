@@ -11,9 +11,7 @@ export class Header extends Component {
             case false:
                 return (
                     <li>
-                        <a href='/auth/google' className='btn'>
-                            Sign Up/Sign In
-                        </a>
+                        <a href='/auth/google'>Sign Up/Sign In</a>
                     </li>
                 );
             default:
