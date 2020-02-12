@@ -30,7 +30,6 @@ export class Header extends Component {
     }
 
     render() {
-        console.log(this.props);
         return (
             <nav
                 className='light-blue lighten-3'

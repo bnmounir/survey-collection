@@ -16,18 +16,21 @@ app.use(
 
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(express.static('public'));
 
 require('./models/User');
+require('./models/Survey');
 require('./services/passport');
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app);
 
 mongoose
     .connect(keys.mongoURI, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
-    .then(data => console.log(' Connected! '))
+    .then(data => console.log(' Connected to DB! '))
     .catch(err => console.log('Failed to Connect: ', err));
 
 if (process.env.NODE_ENV === 'production') {
