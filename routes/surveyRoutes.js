@@ -15,7 +15,7 @@ module.exports = app => {
         res.send(surveys);
     });
 
-    app.get('/api/surveys/:surveyId/:choice/thanks', (req, res) => {
+    app.get('api/surveys/:surveyId/:choice/thanks', (req, res) => {
         res.send(`
         <!DOCTYPE html>
         <html lang="en" style="margin: 0; background-color: rgb(149, 250, 250);">
